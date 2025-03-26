@@ -1,0 +1,1759 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Universidad Autónoma del Estado de México},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{ragged2e}
+\justifying
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Universidad Autónoma del Estado de México}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Licenciatura en Actuaría}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\begin {centering}
+\Huge \bfseries Análisis de la Mortalidad en México mediante el Modelo Lee-Carter: Integración de Datos Históricos y Proyecciones \par
+\end {centering}
+\vspace*{4cm}
+
+\vspace{1cm}
+\vspace{2cm}
+
+\begin{centering}
+\huge \bfseries 
+Autores:
+
+
+Fuentes Hinojosa Santiago de Jesus
+
+Lopez Valerio Santiago \par
+\end{centering}
+\vspace*{2cm}
+
+\vfill
+\large  \par
+\vfill
+
+Toluca, Estado de México a 26 de marzo de 2025
+
+\clearpage
+\raggedright
+
+\clearpage
+
+\justify
+
+\hypertarget{objetivo}{%
+\section{1. Objetivo}\label{objetivo}}
+
+El objetivo principal de este trabajo es analizar la evolución de la
+mortalidad en la población mexicana a lo largo de más de un siglo,
+integrando datos históricos y recientes para aplicar el modelo
+Lee-Carter. Con ello, se busca identificar tendencias en las tasas de
+mortalidad y proyectar su comportamiento futuro, de esta manera se
+pretende facilitar la toma de decisiones informadas en ámbitos
+actuariales y de salud pública en México.
+
+\hypertarget{introducciuxf3n}{%
+\section{2. Introducción}\label{introducciuxf3n}}
+
+En los estudios actuariales y demográficos, el análisis de la mortalidad
+juega un papel importante para la toma de decisiones en políticas
+públicas, planes de pensiones y seguros de vida. El presente proyecto
+tiene como objetivo analizar las tendencias de mortalidad en México,
+haciendo uso del modelo de Lee-Carter, uno de los métodos más
+reconocidos para modelar y pronosticar tasas de mortalidad a través del
+tiempo.
+
+La relevancia de este estudio radica en la necesidad de entender cómo
+han evolucionado las tasas de mortalidad por edad y sexo a lo largo de
+más de un siglo, así como de contar con herramientas sólidas para
+proyectar estos patrones en el futuro. De esta forma, se pueden estimar
+expectativas de vida y riesgos actuariales con mayor precisión,
+contribuyendo a una mejor planificación y gestión de recursos en áreas
+como seguridad social, salud pública y seguros.
+
+A lo largo del documento se abordarán los siguientes aspectos:
+
+\textbf{1- Revisión de datos y preparación de la base:} Se describe el
+origen de los datos, su limpieza y la integración de distintas fuentes
+para conformar la base de datos final.
+
+\textbf{2- Análisis descriptivo:} Se exploran las tasas de mortalidad
+por edad y año para hombres y mujeres, presentando gráficas que ilustran
+la evolución y los patrones más relevantes.
+
+\textbf{3- Aplicación del modelo Lee-Carter:} Se explica la metodología
+del modelo y su ajuste a los datos para ambos sexos, mostrando los
+resultados y discutiendo su interpretación.
+
+\textbf{4- Conclusiones:} Se presentan los hallazgos principales del
+análisis y se discuten sus implicaciones en ámbitos demográficos y
+actuariales, así como posibles líneas de investigación futura.
+
+\hypertarget{revisiuxf3n-de-literatura}{%
+\section{3. Revisión de Literatura}\label{revisiuxf3n-de-literatura}}
+
+\hypertarget{mortality-forecasting-in-latin-america-an-assessment-of-the-lee-carter-model}{%
+\subsection{1. Mortality Forecasting in Latin America: An Assessment of
+the Lee-Carter
+Model}\label{mortality-forecasting-in-latin-america-an-assessment-of-the-lee-carter-model}}
+
+\href{https://www.tandfonline.com/doi/epdf/10.1080/03461238.2021.1928542?needAccess=true}{\emph{Mortality
+Forecasting in Latin America: An Assessment of the Lee-Carter Model}}
+
+Janssen, F., \& Debón, A. (2021). An age-specific evaluation of the
+Lee-Carter mortality forecasting model. Scandinavian Actuarial Journal,
+2021(8), 654-679. \url{https://doi.org/10.1080/03461238.2021.192854}
+
+Los autores evalúan la aplicación del modelo Lee-Carter para pronosticar
+la mortalidad en distintos países de América Latina. Su investigación
+destaca los siguientes aspectos relevantes para este proyecto:
+
+\textbf{1- Ventajas del modelo Lee-Carter:} Se enfatiza cómo este modelo
+captura de forma efectiva la tendencia general de la mortalidad a través
+del tiempo, descomponiendo las tasas de mortalidad en factores que
+permiten aislar patrones de cambio a largo plazo.
+
+\textbf{2- Adaptabilidad a distintas poblaciones:} El estudio muestra
+que el enfoque Lee-Carter puede ajustarse a diversas realidades
+demográficas, resultando útil para países con cambios acelerados en su
+estructura etaria y en sus patrones de mortalidad.
+
+\textbf{3- Importancia de la calidad de datos:} Se subraya la necesidad
+de contar con series de mortalidad históricas consistentes y completas
+para mejorar la fiabilidad de las proyecciones, algo que este proyecto
+también busca asegurar al integrar múltiples fuentes de datos.
+
+\textbf{4- Proyecciones a mediano y largo plazo:} El trabajo demuestra
+que el modelo Lee-Carter ofrece una forma relativamente sencilla y
+robusta de proyectar la evolución futura de la mortalidad, lo que lo
+convierte en una herramienta valiosa para la planificación de políticas
+públicas y la evaluación actuarial.
+
+En conjunto, esta literatura respalda la pertinencia de emplear el
+modelo Lee-Carter en el presente proyecto, al ofrecer evidencia empírica
+de su eficacia y versatilidad para analizar y pronosticar tendencias de
+mortalidad en contextos demográficos complejos.
+
+\hypertarget{latin-american-mortality-database}{%
+\subsection{2. Latin American Mortality
+Database}\label{latin-american-mortality-database}}
+
+\href{https://www.ssc.wisc.edu/cdha/latinmortality2/?page_id=28}{\emph{Latin
+American Mortality Database}}
+
+University of Wisconsin-Madison. (n.d.). Latin mortality project (2nd
+ed.). Center for Demography and Ecology.
+\url{https://www.ssc.wisc.edu/cdha/latinmortality2/}
+
+Esta base de datos se utilizó para obtener las tablas de vida empleadas
+en la estimación del modelo Lee-Carter. En ella se encuentran las tablas
+de vida correspondientes a México clasificadas por sexo.
+
+\hypertarget{the-latin-american-mortality-database-lambda.-methodological-document-version-ii-august-2021}{%
+\subsection{3. The Latin American Mortality Database (LAMBdA).
+Methodological Document Version II: August
+2021}\label{the-latin-american-mortality-database-lambda.-methodological-document-version-ii-august-2021}}
+
+Al momento de acceder a las tablas de vida, podemos encontrar esta
+documentación la cual explica los métodos que siguen para estimar los
+datos que tienen el base de datos. El capítulo 3 es el que se centra en
+la parte de la estimación de las tablas de vida desde 1850-2020.
+
+\textbf{1- Fuentes de datos:} se decriben las principales fuentes de
+datos utilizados para la estimación de las tablas de vida, en los que se
+incluyen censos de población y estadísticas vitales de defunciones.
+
+Estas fuentes fueron la clave para construir las estimaciones
+consistentes de la mortalidad, sin embargo, la disponibilidad de estos
+datos varíaban a lo largo del tiempo y por países.
+
+También relatan la complejidad a la que se enfrentaron, ya que una de
+las principales limitaciones en la construcción de tablas de vida fue la
+falta de datos precisos, especialmente antes de 1950. Esto debido a los
+censos de población y a las estadísticas de mortalidad para cada país.
+
+\textbf{2- Ajustes en las tasas de mortalidad:} para estimar las tasas
+de mortalidad que vienen en las tablas de vida, las cuales son
+fundamentales para el modelo Lee-Carter, se utilizaron métodos como el
+modelo de ogiva generalizado de Coale y Demey (1967) y variantes de los
+métodos de Brass.
+
+\textbf{3- Mortalidad infantil:} en el caso de la mortalidad infantil y
+juvenil, mencionan que hicieron énfasis especial en cómo estimar la
+mortalidad infantil y niños pequeños, por ejemplo tasas como 5Q0 y 1Q0
+en quellos países en donde los datos que se disponen son limitados.
+
+\hypertarget{mortality-forecasting-at-age-65-and-above-an-age-specific-evaluation-of-the-lee-carter-model}{%
+\subsection{4. Mortality forecasting at age 65 and above: an
+age-specific evaluation of the Lee-Carter
+model}\label{mortality-forecasting-at-age-65-and-above-an-age-specific-evaluation-of-the-lee-carter-model}}
+
+Lee, R. D., \& Carter, L. (1992). Modeling and forecasting U.S.
+mortality. Journal of the American Statistical Association, 87(419),
+659-671. \url{https://doi.org/10.1080/03461238.2021.1928542}
+
+\href{https://www.tandfonline.com/doi/full/10.1080/03461238.2021.1928542\#d1e148}{\emph{Mortality
+forecasting at age 65 and above: an age-specific evaluation of the
+Lee-Carter model}}
+
+Este artículo analiza de manera profunda la precisión, el sesgo y la
+robustez del modelo Lee-Carter (LC) para la proyección de mortalidad a
+partir de los 65 años, evaluando su desempeño en cuatro países mediante
+un enfoque fuera de la muestra que se utiliza. El estudio muestra que el
+modelo LC es adecuado cuando la Tasa de Mejora de Mortalidad por Edad
+(ASRMI) es constante, pero señala que las ASRMI rara vez son constantes
+durante la práctica, lo que limita la precisión del modelo en la mayoría
+de los casos.
+
+\hypertarget{mortallity-modelling-and-forecasting-a-review-of-methods}{%
+\subsection{5. Mortallity Modelling and forecasting: a review of
+methods}\label{mortallity-modelling-and-forecasting-a-review-of-methods}}
+
+\href{https://www.actuaries.org/CTTEES_TFM/Documents/Booth_Tickle.pdf}{\emph{Mortality
+Modelling and forecasting: a review of methods}}
+
+Booth, H., \& Tickle, L. (2008). Mortality modelling and forecasting: A
+review of methods. Actuarial Association of Australia. Retrieved from
+\url{https://www.actuaries.org/CTTEES_TFM/Documents/Booth_Tickle.pdf}
+
+Este artículo proporciona una revisión exhaustiva de los métodos de
+modelado y pronóstico de mortalidad, destacando las técnicas más comunes
+que han sido utilizadas por los actuarios y demógrafos para pronosticar
+las tasas de mortalidad y la esperanza de vida a través del tiempo.
+
+Dentro de los métodos de modelado de mortalidad, se exploran avrias
+técnicas de modelado, una de esras técnica es el modelo de Lee-Carter.
+Se discute la ventaja de este modelo por su simplicidad y su
+flexibilidad para capturar las tendencias de mejora de mortalidad a
+través del tiempo.
+
+También se puede observar que se habla sobre las limitaciones de este
+modelo, este modelo no es capaz de captar los cambios abruptos de la
+mortalidad.
+
+\hypertarget{anuxe1lisis-exploratorio-de-datos}{%
+\section{4. Análisis exploratorio de
+datos}\label{anuxe1lisis-exploratorio-de-datos}}
+
+\justifying
+
+A continuación, se presentarán las librerías de R necesarias para el
+desarrollo de este proyecto. Estas herramientas facilitarán la
+manipulación y el análisis de datos, así como la generación de
+resultados y visualizaciones de manera eficiente.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(corrplot)}
+\FunctionTok{library}\NormalTok{(pacman)}
+\FunctionTok{library}\NormalTok{(demography)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(reshape2)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(skimr)}
+\end{Highlighting}
+\end{Shaded}
+
+Después de haber cargado las librerías, procedimos a cargar la base de
+datos correspondiente a la población masculina, comprendida entre los
+años 1985 y 2005. Esta base de datos fue obtenida de la \emph{Latin
+Mortality Database (Latin Mortality Database, n.d.)} recuperada de
+\url{https://www.ssc.wisc.edu/cdha/latinmortality2/?page_id=28}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{datos\_lc5 }\OtherTok{\textless{}{-}} \FunctionTok{read.table}\NormalTok{(}\StringTok{"Mex\_mltpiv\_5x1.txt"}\NormalTok{, }\AttributeTok{header =}\NormalTok{ T, }\AttributeTok{sep =} \StringTok{""}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+Para comenzar el análisis de nuestra base de datos, lo primero que
+debemos hacer es examinar su estructura, lo que nos permitirá saber las
+variables que contiene, su tipo y la forma en que se organizan.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(datos\_lc5)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    342 obs. of  10 variables:
+##  $ ctry     : chr  "Mexico" "Mexico" "Mexico" "Mexico" ...
+##  $ ctry.code: int  2310 2310 2310 2310 2310 2310 2310 2310 2310 2310 ...
+##  $ year     : int  1895 1895 1895 1895 1895 1895 1895 1895 1895 1895 ...
+##  $ age      : int  0 1 5 10 15 20 25 30 35 40 ...
+##  $ mx       : num  0.30741 0.23314 0.0136 0.00742 0.00989 ...
+##  $ qx       : num  0.2646 0.208 0.0657 0.0364 0.0483 ...
+##  $ lx       : int  100000 73535 58242 54417 52435 49903 46862 43773 40780 37773 ...
+##  $ Lx       : int  82268 253645 280694 267329 256098 242217 226896 211681 196684 181084 ...
+##  $ Tx       : int  2872238 2789970 2536324 2255631 1988302 1732204 1489987 1263091 1051410 854726 ...
+##  $ ex       : num  28.7 37.9 43.5 41.5 37.9 ...
+\end{verbatim}
+
+Podemos notar que tenemos 10 variables, de las cuales solo ``ctry'' es
+de tipo caracter, las demás son numéricas. Es indispensable explicar que
+significa cada variable:
+
+-\textbf{mx}: tasa de mortalidad a edad x
+
+-\textbf{qx}: probabilidad de muerte a edad x
+
+-\textbf{lx}: número de sobrevivientes a edad x
+
+-\textbf{Lx}: cantidad de años vividos entre las edades x y x+1
+
+-\textbf{Tx}: años totales vividos
+
+-\textbf{ex}: esperanza de vida a edad x
+
+Luego, es fundamental describir nuestras variables: para las numéricas,
+usaremos summary(), la cual nos dará estadísticas básicas (mínimo,
+máximo, media, etc.). Estos pasos iniciales nos permiten asegurarnos de
+que los datos están en orden y listos para un mejor análisis.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(datos\_lc5)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      ctry             ctry.code         year           age       
+##  Length:342         Min.   :2310   Min.   :1895   Min.   : 0.00  
+##  Class :character   1st Qu.:2310   1st Qu.:1910   1st Qu.:15.00  
+##  Mode  :character   Median :2310   Median :1932   Median :40.00  
+##                     Mean   :2310   Mean   :1939   Mean   :40.32  
+##                     3rd Qu.:2310   3rd Qu.:1965   3rd Qu.:65.00  
+##                     Max.   :2310   Max.   :2005   Max.   :85.00  
+##        mx                qx                lx               Lx        
+##  Min.   :0.00032   Min.   :0.00162   Min.   :   447   Min.   :  1072  
+##  1st Qu.:0.01065   1st Qu.:0.04892   1st Qu.: 27385   1st Qu.: 98900  
+##  Median :0.02164   Median :0.09072   Median : 49999   Median :217112  
+##  Mean   :0.07351   Mean   :0.21238   Mean   : 50492   Mean   :216807  
+##  3rd Qu.:0.09787   3rd Qu.:0.25204   3rd Qu.: 74606   3rd Qu.:300476  
+##  Max.   :0.41755   Max.   :1.00000   Max.   :100000   Max.   :487300  
+##        Tx                ex       
+##  Min.   :   1072   Min.   : 2.39  
+##  1st Qu.: 335332   1st Qu.:10.77  
+##  Median :1275638   Median :25.78  
+##  Mean   :1749231   Mean   :26.29  
+##  3rd Qu.:2750162   3rd Qu.:38.00  
+##  Max.   :7154615   Max.   :72.10
+\end{verbatim}
+
+Para este análisis, hemos optado por conservar únicamente las variables
+que consideramos de interés, con el fin de enfocar nuestro estudio en
+aquellos aspectos fundamentales de la base de datos. Al seleccionar
+cuidadosamente estas variables, buscamos asegurar que cada una aporte
+información relevante y contribuya de manera directa a la interpretación
+precisa de los resultados que obtendremos más adelante.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{datos\_lc2005 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(datos\_lc5, year, age, mx, qx, lx, Lx, Tx, ex)}
+\end{Highlighting}
+\end{Shaded}
+
+Nos hemos quedado unicamente con \textbf{year, age, mx, qx, lx, Lx, Tx,
+ex.}
+
+Hasta este punto, hemos constatado que los datos disponibles abarcan el
+período comprendido entre 1895 y 2005. Con el objetivo de ampliar
+nuestro análisis temporal, procederemos a incorporar información
+adicional, concretamente, datos correspondientes al intervalo de 2005 a
+2021. Esta ampliación se fundamenta en la información proporcionada en
+la fuente \emph{Tablas de vida (UISP, n.d.),} disponible en
+\url{https://uisp.insp.mx/wp/index.php/tablas-de-vida/}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# 2006 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2006general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2006.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df3 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2006general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2007 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2007general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2007\_1.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df4 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2007general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2008 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\NormalTok{tablas2008general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2008.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df5 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2008general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2009 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2009general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2009.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df6 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2009general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2010 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\NormalTok{tablas2010general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2010.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df7 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2010general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2011 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2011general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2011.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df8 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2011general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2012 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2012general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2012.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df9 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2012general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2013 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2013general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2013.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+
+\NormalTok{df10 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2013general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2014 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2014general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2014.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df11 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2014general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2015 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2015general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2015.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df12 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2015general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2016 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2016general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2016.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df13 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2016general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2017 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2017general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2017.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df14 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2017general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2018 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2018general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2018.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df15 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2018general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2019 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2019general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2019.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df16 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2019general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2020 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2020general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2020.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df17 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2020general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+
+
+\CommentTok{\# 2021 {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\NormalTok{tablas2021general }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"2021.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{"}\SpecialCharTok{\textbackslash{}t}\StringTok{"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{fileEncoding=}\StringTok{"UTF{-}16LE"}\NormalTok{)}
+\NormalTok{df18 }\OtherTok{\textless{}{-}}\NormalTok{ tablas2021general[}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+Procederemos ahora a seleccionar únicamente aquellas variables que
+coincidan con las presentes en el data frame correspondiente a los datos
+de 1895 a 2005.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{datos\_lc2006 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df3,  year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2007 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df4,  year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2008 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df5,  year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2009 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df6, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2010 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df7, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2011 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df8, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2012 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df9, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2013 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df10, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2014 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df11, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2015 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df12, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2016 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df13, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2017 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df14, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2018 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df15, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2019 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df16, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2020 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df17, year, age, mx, qx, lx, Lx, Tx, ex )}
+\NormalTok{datos\_lc2021 }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df18, year, age, mx, qx, lx, Lx, Tx, ex )}
+\end{Highlighting}
+\end{Shaded}
+
+Realizamos el merge con el objetivo de integrar las bases de datos
+correspondientes a periodos posteriores. Es importante señalar que esta
+fusión se llevará a cabo de manera progresiva, combinando los conjuntos
+de datos de forma secuencial y por pares.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{merge1 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(datos\_lc2005, datos\_lc2006, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge2 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge1, datos\_lc2007, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge3 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge2, datos\_lc2008, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge4 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge3, datos\_lc2009, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge5 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge4, datos\_lc2010, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge6 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge5, datos\_lc2011, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge7 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge6, datos\_lc2012, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge8 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge7, datos\_lc2013, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge9 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge8, datos\_lc2014, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge10 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge9, datos\_lc2015, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge11 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge10, datos\_lc2016, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge12 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge11, datos\_lc2017, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge13 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge12, datos\_lc2018, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge14 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge13, datos\_lc2019, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge15 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge14, datos\_lc2020, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge16 }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge15, datos\_lc2021, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mx"}\NormalTok{, }\StringTok{"qx"}\NormalTok{, }\StringTok{"lx"}\NormalTok{, }\StringTok{"Lx"}\NormalTok{, }\StringTok{"Tx"}\NormalTok{, }\StringTok{"ex"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Definimos la base final ``base\_final\_hombres'', la cual ya integra los
+datos correspondientes al periodo comprendido entre 1895 y 2021.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{base\_final\_hombres }\OtherTok{\textless{}{-}}\NormalTok{ merge16}
+\end{Highlighting}
+\end{Shaded}
+
+Durante el proceso de revisión y exploración de los datos, detectamos
+que algunos registros presentaban comas en lugares inesperados, lo que
+alteraba el formato numérico adecuado. Este inconveniente afectaba el
+procesamiento correcto de la información, pudiendo distorsionar nuestros
+cálculos y análisis posteriores.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Verificacion de los datos }
+\NormalTok{columnas\_con\_coma }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(base\_final\_hombres, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{any}\NormalTok{(}\FunctionTok{grepl}\NormalTok{(}\StringTok{","}\NormalTok{,x)))}
+\FunctionTok{print}\NormalTok{(columnas\_con\_coma)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  year   age    mx    qx    lx    Lx    Tx    ex 
+## FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Eliminamos las comas}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{lx }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,base\_final\_hombres}\SpecialCharTok{$}\NormalTok{lx)}
+
+\CommentTok{\# Detectamos la presencia de mas comas en columnas Tx y ex}
+\CommentTok{\# Columna Tx}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Tx }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Tx)}
+
+\CommentTok{\# Columna ex}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Lx }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Lx)}
+\end{Highlighting}
+\end{Shaded}
+
+Una vez concluido el proceso de limpieza de comas, procederemos a
+examinar detenidamente la estructura de la base de datos, verificando
+que cada uno de sus componentes se encuentre organizado según lo
+esperado. Posteriormente, convertiremos todas nuestras variables al tipo
+numérico
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{year }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{year)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{age }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{age)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{mx }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{mx)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{qx }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{qx)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{lx }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{lx)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Lx }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Lx)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Tx }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{Tx)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{ex }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{ex)}
+\end{Highlighting}
+\end{Shaded}
+
+Procedamos a realizar un análisis de correlación lineal para investigar
+si se establecen relaciones significativas entre las variables de
+nuestro conjunto de datos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cor}\NormalTok{(base\_final\_hombres[, }\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{,}\StringTok{"mx"}\NormalTok{,}\StringTok{"qx"}\NormalTok{,}\StringTok{"lx"}\NormalTok{,}\StringTok{"Lx"}\NormalTok{,}\StringTok{"Tx"}\NormalTok{,}\StringTok{"ex"}\NormalTok{)])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##               year           age         mx         qx         lx         Lx
+## year  1.000000e+00 -5.232687e-20 -0.3927207 -0.2375079  0.6373840  0.6345414
+## age  -5.232687e-20  1.000000e+00  0.3934822  0.6774502 -0.6918712 -0.4574899
+## mx   -3.927207e-01  3.934822e-01  1.0000000  0.8202217 -0.5564214 -0.6771687
+## qx   -2.375079e-01  6.774502e-01  0.8202217  1.0000000 -0.7457807 -0.6875409
+## lx    6.373840e-01 -6.918712e-01 -0.5564214 -0.7457807  1.0000000  0.8236354
+## Lx    6.345414e-01 -4.574899e-01 -0.6771687 -0.6875409  0.8236354  1.0000000
+## Tx    4.667957e-01 -8.272127e-01 -0.4266558 -0.5874758  0.8411394  0.6327994
+## ex    3.281810e-01 -9.104004e-01 -0.4947681 -0.6558508  0.8004225  0.6162034
+##              Tx         ex
+## year  0.4667957  0.3281810
+## age  -0.8272127 -0.9104004
+## mx   -0.4266558 -0.4947681
+## qx   -0.5874758 -0.6558508
+## lx    0.8411394  0.8004225
+## Lx    0.6327994  0.6162034
+## Tx    1.0000000  0.9749885
+## ex    0.9749885  1.0000000
+\end{verbatim}
+
+Podemos observar que existen relaciones signifativas. Por ejemplo entre
+\emph{mx} y \emph{qx}, \emph{lx} y \emph{Lx}, \emph{Tx} y \emph{lx},
+\emph{Tx} y \emph{Lx} , \emph{Tx} y \emph{ex}, entre otros.
+
+Para el caso de las mujeres, se aplicó el mismo procedimiento. Con el
+fin de mantener la brevedad y evitar extendernos innecesariamente, a
+continuación se presenta únicamente el código utilizado junto con sus
+respectivos resultados.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# LIMPIEZA DE LA BASE DE DATOS}
+\CommentTok{\# Leemos los de intervalos de 5}
+\NormalTok{datos\_lc5\_m }\OtherTok{\textless{}{-}} \FunctionTok{read.table}\NormalTok{(}\StringTok{"Mex\_fltpiv\_5x1\_mujeres.txt"}\NormalTok{, }\AttributeTok{header =}\NormalTok{ T, }\AttributeTok{sep =} \StringTok{""}\NormalTok{)}
+
+\CommentTok{\# Nos quedamos con las variables de nuestro interes}
+\NormalTok{datos\_lc2005\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(datos\_lc5\_m, year, age, mxm, qxm, lxm, Lxm, Txm, exm)}
+
+\CommentTok{\# NOTA:}
+\CommentTok{\# Hasta aqui podemos ver que tenemos los datos desde 1895{-}2005}
+\CommentTok{\# Continuamos con las demas tablas}
+\NormalTok{datos\_lc2006\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df3,  year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2007\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df4,  year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2008\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df5,  year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2009\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df6, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2010\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df7, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2011\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df8, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2012\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df9, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2013\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df10, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2014\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df11, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2015\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df12, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2016\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df13, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2017\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df14, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2018\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df15, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2019\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df16, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2020\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df17, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+\NormalTok{datos\_lc2021\_m }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(df18, year, age, mxm, qxm, lxm, Lxm, Txm, exm )}
+
+
+\CommentTok{\# Realizamos el merge}
+\CommentTok{\# Esto es con la finalidad de ir juntando las bases de datos de periodos posteriores}
+\CommentTok{\# Debemos de ir haciendolo por pares}
+\NormalTok{merge1m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(datos\_lc2005\_m, datos\_lc2006\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge2m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge1m, datos\_lc2007\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge3m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge2m, datos\_lc2008\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge4m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge3m, datos\_lc2009\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge5m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge4m, datos\_lc2010\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge6m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge5m, datos\_lc2011\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge7m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge6m, datos\_lc2012\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge8m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge7m, datos\_lc2013\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge9m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge8m, datos\_lc2014\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge10m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge9m, datos\_lc2015\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge11m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge10m, datos\_lc2016\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge12m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge11m, datos\_lc2017\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge13m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge12m, datos\_lc2018\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge14m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge13m, datos\_lc2019\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge15m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge14m, datos\_lc2020\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{merge16m }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(merge15m, datos\_lc2021\_m, }\AttributeTok{by=}\FunctionTok{c}\NormalTok{(}\StringTok{"year"}\NormalTok{,}\StringTok{"age"}\NormalTok{, }\StringTok{"mxm"}\NormalTok{, }\StringTok{"qxm"}\NormalTok{, }\StringTok{"lxm"}\NormalTok{, }\StringTok{"Lxm"}\NormalTok{, }\StringTok{"Txm"}\NormalTok{, }\StringTok{"exm"}\NormalTok{), }\AttributeTok{all.x =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{all.y =} \ConstantTok{TRUE}\NormalTok{)}
+
+
+\DocumentationTok{\#\#Nombramos base final hombres}
+\NormalTok{base\_final\_mujeres }\OtherTok{\textless{}{-}}\NormalTok{ merge16m}
+
+\CommentTok{\# Verificacion de los datos }
+\NormalTok{columnas\_con\_coma }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(base\_final\_mujeres, }\ControlFlowTok{function}\NormalTok{(x) }\FunctionTok{any}\NormalTok{(}\FunctionTok{grepl}\NormalTok{(}\StringTok{","}\NormalTok{,x)))}
+\FunctionTok{print}\NormalTok{(columnas\_con\_coma)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  year   age   mxm   qxm   lxm   Lxm   Txm   exm 
+## FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Eliminamos las comas}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{lxm }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{lxm)}
+
+\CommentTok{\# Detectamos la presencia de mas comas en columnas Tx y ex}
+\CommentTok{\# Columna Tx}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Txm }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Txm)}
+
+\CommentTok{\# Columna ex}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Lxm }\OtherTok{\textless{}{-}} \FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Lxm)}
+
+\CommentTok{\#Vamos a pasar las variables a numericas}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{year }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{year)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{age }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{age)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{mxm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{mxm)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{qxm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{qxm)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{lxm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{lxm)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Lxm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Lxm)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Txm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{Txm)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{exm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{exm)}
+\end{Highlighting}
+\end{Shaded}
+
+Para culminar el punto 4, presentamos de forma gráfica las tasas de
+mortalidad en función del factor de edad y año, tanto para hombres como
+para mujeres. Con este análisis visual, buscamos identificar patrones y
+tendencias que reflejen la evolución de estas tasas a lo largo del
+tiempo.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# TASAS DE MORTALIDAD MUJERES {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{ggplot}\NormalTok{(base\_final\_mujeres, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ age, }\AttributeTok{y =}\NormalTok{ mxm, }\AttributeTok{group =} \FunctionTok{factor}\NormalTok{(year), }\AttributeTok{color =} \FunctionTok{factor}\NormalTok{(year))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Tasas de mortalidad en mujeres por edad y año"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Edad"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Tasa de mortalidad (mxM)"}\NormalTok{,}
+    \AttributeTok{color =} \StringTok{"Año"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Segunda grafica}
+
+\FunctionTok{ggplot}\NormalTok{(base\_final\_mujeres, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ age, }\AttributeTok{y =}\NormalTok{ mxm, }\AttributeTok{group =}\NormalTok{ year, }\AttributeTok{color =} \FunctionTok{factor}\NormalTok{(year))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_log10}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Tasas de mortalidad (escala logarítmica) mujeres"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Edad"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"mxm (escala log)"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-13-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Tercera gráfica}
+\FunctionTok{ggplot}\NormalTok{(base\_final\_mujeres, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }
+                               \AttributeTok{y =} \FunctionTok{log}\NormalTok{(mxm),       }\CommentTok{\# o bien scale\_y\_log10()}
+                               \AttributeTok{group =}\NormalTok{ age, }
+                               \AttributeTok{color =}\NormalTok{ age)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \CommentTok{\# Escala continua de color (puedes usar otras paletas)}
+  \FunctionTok{scale\_color\_viridis\_c}\NormalTok{(}\AttributeTok{option =} \StringTok{"plasma"}\NormalTok{) }\SpecialCharTok{+}  \CommentTok{\# o "magma", "inferno", etc.}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Tasas de mortalidad de mujeres (log) por año y edad"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Año"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Log de la tasa de mortalidad"}\NormalTok{,}
+    \AttributeTok{color =} \StringTok{"Edad"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-13-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# TASAS DE MORTALIDAD HOMBRES {-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{ggplot}\NormalTok{(base\_final\_hombres, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ age, }\AttributeTok{y =}\NormalTok{ mx, }\AttributeTok{group =} \FunctionTok{factor}\NormalTok{(year), }\AttributeTok{color =} \FunctionTok{factor}\NormalTok{(year))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Tasas de mortalidad de hombres por edad y año"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Edad"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Tasa de mortalidad (mx)"}\NormalTok{,}
+    \AttributeTok{color =} \StringTok{"Año"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-13-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Segunda grafica}
+
+\FunctionTok{ggplot}\NormalTok{(base\_final\_hombres, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ age, }\AttributeTok{y =}\NormalTok{ mx, }\AttributeTok{group =}\NormalTok{ year, }\AttributeTok{color =} \FunctionTok{factor}\NormalTok{(year))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_log10}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Tasas de mortalidad hombres (escala logarítmica)"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Edad"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"mx (escala log)"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-13-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Tercera gráfica}
+\FunctionTok{ggplot}\NormalTok{(base\_final\_hombres, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }
+                               \AttributeTok{y =} \FunctionTok{log}\NormalTok{(mx),       }\CommentTok{\# o bien scale\_y\_log10()}
+                               \AttributeTok{group =}\NormalTok{ age, }
+                               \AttributeTok{color =}\NormalTok{ age)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \CommentTok{\# Escala continua de color (puedes usar otras paletas)}
+  \FunctionTok{scale\_color\_viridis\_c}\NormalTok{(}\AttributeTok{option =} \StringTok{"plasma"}\NormalTok{) }\SpecialCharTok{+}  \CommentTok{\# o "magma", "inferno", etc.}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{title =} \StringTok{"Tasas de mortalidad de hombres (log) por año y edad"}\NormalTok{,}
+    \AttributeTok{x =} \StringTok{"Año"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Log de la tasa de mortalidad"}\NormalTok{,}
+    \AttributeTok{color =} \StringTok{"Edad"}
+\NormalTok{  ) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-13-6.pdf}
+
+\hypertarget{metodologuxeda}{%
+\section{5. Metodología}\label{metodologuxeda}}
+
+A continuación, se describe la metodología empleada para el análisis de
+datos y la construcción del modelo de mortalidad:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Recopilación y fuente de datos}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Se reunieron registros históricos de mortalidad, específicamente de
+    \href{https://www.ssc.wisc.edu/cdha/latinmortality2/?page_id=28}{Latin
+    Mortality Database (n.d.)} y
+    \href{https://uisp.insp.mx/wp/index.php/tablas-de-vida/}{Tablas de
+    vida (UISP, n.d.)}.\\
+  \item
+    Estos conjuntos de datos abarcan distintos periodos, desde finales
+    del siglo XIX hasta inicios del siglo XXI, y contienen información
+    relativa a tasas de mortalidad, número de sobrevivientes y años
+    vividos, tanto para hombres como para mujeres.
+  \end{itemize}
+\item
+  \textbf{Limpieza y preparación de la información}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Se revisó la estructura de los datos con funciones como
+    \texttt{str()}, \texttt{head()} y \texttt{summary()} para
+    identificar inconsistencias o errores de formato.\\
+  \item
+    Se corrigieron valores no válidos y se eliminaron o reemplazaron
+    caracteres extra (por ejemplo, comas en campos numéricos). Además,
+    se convirtieron las variables a tipos apropiados (numéricas,
+    factores, etc.).\\
+  \item
+    Se unificaron las bases de datos provenientes de distintos periodos
+    (por ejemplo, 1895-2005 y 2005-2013) mediante un proceso de
+    \texttt{merge}, asegurando la correspondencia de las variables clave
+    (edades, años y tasas de mortalidad).
+  \end{itemize}
+\item
+  \textbf{Selección de variables relevantes}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Se identificaron las variables de mayor interés para el análisis
+    actuarial, como \(m_x\) (tasa de mortalidad), \(l_x\)
+    (sobrevivientes a la edad \(x\)), \(L_x\) (años vividos entre edades
+    \(x\) y \(x+1\)) y \(T_x\) (suma acumulada de años vividos).\\
+  \item
+    Esta depuración de variables facilitó la construcción de las
+    matrices requeridas para el modelo.
+  \end{itemize}
+\item
+  \textbf{Transformación de datos en formato demográfico}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Con ayuda de funciones del paquete \textbf{\texttt{reshape2}} (por
+    ejemplo, \texttt{acast}), se convirtieron los data frames en
+    matrices, donde las filas corresponden a edades y las columnas a
+    años.\\
+  \item
+    Estas matrices (de tasas, sobrevivientes y años vividos) se
+    transformaron en objetos de la clase \textbf{\texttt{demogdata}}
+    mediante la función \texttt{demogdata} del paquete
+    \textbf{\texttt{demography}}, especificando los vectores de edades,
+    años y el tipo de dato (mortality).
+  \end{itemize}
+\item
+  \textbf{Construcción del modelo (Lee-Carter)}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Se aplicó el modelo \textbf{Lee-Carter} utilizando la función
+    \texttt{lca()} del paquete \textbf{\texttt{demography}}.\\
+  \item
+    El modelo se ajustó en dos configuraciones diferentes, aprovechando
+    tanto la matriz de \(L_x\) como la de \(l_x\) para comparar y
+    contrastar los resultados.\\
+  \item
+    Se emplearon los comandos \texttt{summary()} y \texttt{plot()} para
+    evaluar la calidad del ajuste y visualizar las tendencias de la
+    mortalidad a lo largo del tiempo.
+  \end{itemize}
+\item
+  \textbf{Software y herramientas empleadas}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Paquetes en R:}
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textbf{\texttt{demography}} para la creación de objetos
+      demográficos y aplicación del modelo Lee-Carter.\\
+    \item
+      \textbf{\texttt{reshape2}} (o \texttt{tidyr}) para la manipulación
+      y reestructuración de datos.\\
+    \item
+      \textbf{\texttt{dplyr}, \texttt{ggplot2}, \texttt{readr}} y otros
+      paquetes auxiliares para la limpieza, transformación y
+      visualización de la información.
+    \end{itemize}
+  \end{itemize}
+\end{enumerate}
+
+Esta metodología aseguró la coherencia de los datos y la aplicación
+adecuada del modelo Lee-Carter para el estudio de la mortalidad a lo
+largo de distintos periodos históricos. A continuacion se explicará como
+se utilizó cada línea de código para el caso de la base de datos de
+hombres.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{acast}\NormalTok{(base\_final\_hombres, age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{value.var =} \StringTok{"mx"}\NormalTok{)}
+\CommentTok{\# Conviértela a matriz numérica si no lo es:}
+\NormalTok{mx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{as.matrix}\NormalTok{(mx\_matrix)  }\CommentTok{\# Asegúrate de que sea \textquotesingle{}matrix\textquotesingle{} y no \textquotesingle{}table\textquotesingle{}}
+\NormalTok{mx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(mx\_matrix, }\DecValTok{2}\NormalTok{, as.numeric)}
+\NormalTok{base\_final\_hombres}\SpecialCharTok{$}\NormalTok{mx }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_hombres}\SpecialCharTok{$}\NormalTok{mx)}
+\end{Highlighting}
+\end{Shaded}
+
+Creamos una matriz correspondiente a la tasa de mortalidad. En esta
+matriz, las filas representan las edades y las columnas los años. Cada
+celda contiene el valor de la tasa de mortalidad (mx) correspondiente a
+esa combinación
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Lx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{acast}\NormalTok{(base\_final\_hombres, age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{value.var =} \StringTok{"Lx"}\NormalTok{)}
+\NormalTok{Lx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{as.matrix}\NormalTok{(Lx\_matrix)}
+\NormalTok{Lx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(Lx\_matrix, }\DecValTok{2}\NormalTok{, as.numeric)}
+\FunctionTok{str}\NormalTok{(Lx\_matrix)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:19, 1:34] 82268 253645 280694 267329 256098 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:34] "1895" "1897" "1900" "1905" ...
+\end{verbatim}
+
+Ahora transformamos la información correspondiente a \(L_x\) en una
+matriz organizada por edad y año, y de asegurar que todos los datos sean
+numéricos. Para comprobar la transformación, se muestra la estructura de
+la matriz resultante.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{acast}\NormalTok{(base\_final\_hombres, age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{value.var =} \StringTok{"lx"}\NormalTok{)}
+\NormalTok{lx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{as.matrix}\NormalTok{(lx\_matrix)}
+\NormalTok{lx\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(lx\_matrix, }\DecValTok{2}\NormalTok{, as.numeric)}
+\FunctionTok{str}\NormalTok{(lx\_matrix)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:19, 1:34] 100000 73535 58242 54417 52435 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:34] "1895" "1897" "1900" "1905" ...
+\end{verbatim}
+
+Por ultimo, convertimos los datos de \(l_x\) en una matriz, estructurada
+de manera que cada fila representa una edad y cada columna un año. Se
+aplica la conversión a formato numérico, y luego se utiliza
+\texttt{str()} para revisar la estructura resultante de la matriz.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_data }\OtherTok{\textless{}{-}} \FunctionTok{demogdata}\NormalTok{(}
+  \AttributeTok{data =}\NormalTok{ mx\_matrix,           }\CommentTok{\# Matriz de tasas (o defunciones)}
+  \AttributeTok{pop =}\NormalTok{ Lx\_matrix,}
+  \AttributeTok{ages =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{55}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{65}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{75}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{85}\NormalTok{),       }\CommentTok{\# Vector de edades (ej. 0:100)}
+  \AttributeTok{years =} \FunctionTok{c}\NormalTok{(}\DecValTok{1895}\NormalTok{,}\DecValTok{1897}\NormalTok{,}\DecValTok{1900}\NormalTok{,}\DecValTok{1905}\NormalTok{,}\DecValTok{1910}\NormalTok{,}\DecValTok{1915}\NormalTok{,}\DecValTok{1921}\NormalTok{,}\DecValTok{1925}\NormalTok{,}\DecValTok{1930}\NormalTok{,}\DecValTok{1935}\NormalTok{,}\DecValTok{1940}\NormalTok{,}\DecValTok{1945}\NormalTok{,}\DecValTok{1955}\NormalTok{,}\DecValTok{1965}\NormalTok{,}\DecValTok{1975}\NormalTok{,}\DecValTok{1985}\NormalTok{,}\DecValTok{1995}\NormalTok{,}\DecValTok{2005}\NormalTok{,}\DecValTok{2006}\NormalTok{,}\DecValTok{2007}\NormalTok{,}\DecValTok{2008}\NormalTok{,}\DecValTok{2009}\NormalTok{,}\DecValTok{2010}\NormalTok{,}\DecValTok{2011}\NormalTok{,}\DecValTok{2012}\NormalTok{,}\DecValTok{2013}\NormalTok{,}\DecValTok{2014}\NormalTok{,}\DecValTok{2015}\NormalTok{,}\DecValTok{2016}\NormalTok{,}\DecValTok{2017}\NormalTok{,}\DecValTok{2018}\NormalTok{,}\DecValTok{2019}\NormalTok{,}\DecValTok{2020}\NormalTok{,}\DecValTok{2021}\NormalTok{),        }\CommentTok{\# Vector de años (ej. 1950:2020)}
+  \AttributeTok{type =} \StringTok{"mortality"}\NormalTok{,  }\CommentTok{\# Tipo de dato}
+  \AttributeTok{label =} \StringTok{"Mis datos"}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{"Hombres"}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Las anteriores líneas de código crean un objeto demográfico llamado
+\texttt{my\_data} utilizando la función \texttt{demogdata}. Básicamente,
+se establecen los elementos esenciales para el análisis, incluyendo la
+matriz de tasas de mortalidad, la población (o medida relacionada), y
+los vectores de edades y años. Además, se especifica el tipo de dato (en
+este caso, ``mortality'') y se asignan etiquetas para identificar el
+conjunto de datos. Este objeto se utiliza posteriormente para realizar
+análisis demográficos basados en \(L_x\).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Con matriz lx}
+\NormalTok{my\_data2 }\OtherTok{\textless{}{-}} \FunctionTok{demogdata}\NormalTok{(}
+  \AttributeTok{data =}\NormalTok{ mx\_matrix,           }\CommentTok{\# Matriz de tasas (o defunciones)}
+  \AttributeTok{pop =}\NormalTok{ lx\_matrix,}
+  \AttributeTok{ages =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{55}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{65}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{75}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{85}\NormalTok{),       }\CommentTok{\# Vector de edades (ej. 0:100)}
+  \AttributeTok{years =} \FunctionTok{c}\NormalTok{(}\DecValTok{1895}\NormalTok{,}\DecValTok{1897}\NormalTok{,}\DecValTok{1900}\NormalTok{,}\DecValTok{1905}\NormalTok{,}\DecValTok{1910}\NormalTok{,}\DecValTok{1915}\NormalTok{,}\DecValTok{1921}\NormalTok{,}\DecValTok{1925}\NormalTok{,}\DecValTok{1930}\NormalTok{,}\DecValTok{1935}\NormalTok{,}\DecValTok{1940}\NormalTok{,}\DecValTok{1945}\NormalTok{,}\DecValTok{1955}\NormalTok{,}\DecValTok{1965}\NormalTok{,}\DecValTok{1975}\NormalTok{,}\DecValTok{1985}\NormalTok{,}\DecValTok{1995}\NormalTok{,}\DecValTok{2005}\NormalTok{,}\DecValTok{2006}\NormalTok{,}\DecValTok{2007}\NormalTok{,}\DecValTok{2008}\NormalTok{,}\DecValTok{2009}\NormalTok{,}\DecValTok{2010}\NormalTok{,}\DecValTok{2011}\NormalTok{,}\DecValTok{2012}\NormalTok{,}\DecValTok{2013}\NormalTok{,}\DecValTok{2014}\NormalTok{,}\DecValTok{2015}\NormalTok{,}\DecValTok{2016}\NormalTok{,}\DecValTok{2017}\NormalTok{,}\DecValTok{2018}\NormalTok{,}\DecValTok{2019}\NormalTok{,}\DecValTok{2020}\NormalTok{,}\DecValTok{2021}\NormalTok{),        }\CommentTok{\# Vector de años (ej. 1950:2020)}
+  \AttributeTok{type =} \StringTok{"mortality"}\NormalTok{,  }\CommentTok{\# Tipo de dato}
+  \AttributeTok{label =} \StringTok{"Mis datos"}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{"Hombres"}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+El siguiente bloque de código crea un objeto demográfico llamado
+\texttt{my\_data2} utilizando la función \texttt{demogdata}. En este
+caso, se utiliza la matriz de tasas de mortalidad (\texttt{mx\_matrix})
+y la matriz \texttt{lx\_matrix} para la población. Se establecen los
+vectores de edades y años, se define el tipo de dato (``mortality'') y
+se asignan etiquetas al conjunto de datos. Este objeto servirá para
+llevar a cabo análisis demográficos utilizando la información basada en
+la variable \(l_x\).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Realizamos el ajuste}
+\NormalTok{fit\_lc }\OtherTok{\textless{}{-}} \FunctionTok{lca}\NormalTok{(my\_data, }\AttributeTok{series =} \StringTok{"Hombres"}\NormalTok{, }\AttributeTok{adjust =} \StringTok{"e0"}\NormalTok{)}
+\FunctionTok{summary}\NormalTok{(fit\_lc)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Lee-Carter analysis
+## 
+## Call: lca(data = my_data, series = "Hombres", adjust = "e0") 
+## 
+## Adjustment method: e0
+## Region: Mis datos
+## Years in fit: 1895 - 2021
+## Ages in fit: 0 - 85 
+## 
+## Percentage variation explained: 97.8%
+## 
+## ERROR MEASURES BASED ON MORTALITY RATES
+## 
+## Averages across ages:
+##       ME      MSE      MPE     MAPE 
+## -0.00056  0.00011  0.03198  0.12531 
+## 
+## Averages across years:
+##       IE      ISE      IPE     IAPE 
+## -0.03518  0.00696  2.21575  9.81128 
+## 
+## 
+## ERROR MEASURES BASED ON LOG MORTALITY RATES
+## 
+## Averages across ages:
+##      ME     MSE     MPE    MAPE 
+## 0.00843 0.03643 0.00141 0.02939 
+## 
+## Averages across years:
+##      IE     ISE     IPE    IAPE 
+## 0.66557 2.60205 0.07310 2.29206
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(fit\_lc)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-19-1.pdf}
+
+En este bloque de código se aplica el modelo Lee-Carter para analizar
+las tasas de mortalidad en la serie de datos de hombres. Se realizan dos
+ajustes, cada uno utilizando un conjunto de datos distinto:
+
+\begin{itemize}
+\item
+  \textbf{Con \texttt{my\_data}:}\\
+  Se ajusta el modelo Lee-Carter a los datos contenidos en
+  \texttt{my\_data} y se obtienen tanto un resumen como una
+  representación gráfica de los resultados.
+\item
+  \textbf{Con \texttt{my\_data2}:}\\
+  Se repite el proceso utilizando \texttt{my\_data2}, lo que permite
+  comparar cómo se comporta el modelo cuando se utiliza otra medida de
+  población.
+\end{itemize}
+
+Esta comparación nos ayuda a evaluar el rendimiento y la consistencia
+del modelo bajo diferentes variables dentro de los datos.
+
+El análisis para la base de datos de mujeres se realiza de forma análoga
+al que aplicamos para la base de datos de hombres. Dado que los
+procedimientos y métodos empleados son equivalentes, a continuación se
+presentan únicamente las líneas de código utilizadas para procesar y
+analizar los datos femeninos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Corremos el modelo}
+\CommentTok{\# Generamos las matrices}
+
+\NormalTok{mxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{acast}\NormalTok{(base\_final\_mujeres, age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{value.var =} \StringTok{"mxm"}\NormalTok{)}
+
+\CommentTok{\# Conviértela a matriz numérica si no lo es:}
+\NormalTok{mxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{as.matrix}\NormalTok{(mxm\_matrix)  }\CommentTok{\# Asegúrate de que sea \textquotesingle{}matrix\textquotesingle{} y no \textquotesingle{}table\textquotesingle{}}
+\NormalTok{mxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(mxm\_matrix, }\DecValTok{2}\NormalTok{, as.numeric)}
+\NormalTok{base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{mxm }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(base\_final\_mujeres}\SpecialCharTok{$}\NormalTok{mxm)}
+
+\CommentTok{\# \textquotesingle{}apply\textquotesingle{} recorre cada columna y la convierte a numeric, devolviendo una matriz}
+
+\FunctionTok{str}\NormalTok{(mxm\_matrix)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:19, 1:34] 0.27222 0.22613 0.01243 0.00619 0.00925 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:34] "1895" "1897" "1900" "1905" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Corremos las otras matrices}
+\NormalTok{Lxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{acast}\NormalTok{(base\_final\_mujeres, age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{value.var =} \StringTok{"Lxm"}\NormalTok{)}
+\NormalTok{Lxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{as.matrix}\NormalTok{(Lxm\_matrix)}
+\NormalTok{Lxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(Lxm\_matrix, }\DecValTok{2}\NormalTok{, as.numeric)}
+\FunctionTok{str}\NormalTok{(Lxm\_matrix)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:19, 1:34] 84510 263995 293708 281295 270752 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:34] "1895" "1897" "1900" "1905" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{acast}\NormalTok{(base\_final\_mujeres, age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{value.var =} \StringTok{"lxm"}\NormalTok{)}
+\NormalTok{lxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{as.matrix}\NormalTok{(lxm\_matrix)}
+\NormalTok{lxm\_matrix }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(lxm\_matrix, }\DecValTok{2}\NormalTok{, as.numeric)}
+\FunctionTok{str}\NormalTok{(lxm\_matrix)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  num [1:19, 1:34] 100000 76169 60754 57096 55353 ...
+##  - attr(*, "dimnames")=List of 2
+##   ..$ : NULL
+##   ..$ : chr [1:34] "1895" "1897" "1900" "1905" ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Ajustamos el modelo }
+
+\NormalTok{my\_data\_mujeres }\OtherTok{\textless{}{-}} \FunctionTok{demogdata}\NormalTok{(}
+  \AttributeTok{data =}\NormalTok{ mxm\_matrix,           }\CommentTok{\# Matriz de tasas (o defunciones)}
+  \AttributeTok{pop =}\NormalTok{ Lxm\_matrix,}
+  \AttributeTok{ages =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{55}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{65}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{75}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{85}\NormalTok{),       }\CommentTok{\# Vector de edades (ej. 0:100)}
+  \AttributeTok{years =} \FunctionTok{c}\NormalTok{(}\DecValTok{1895}\NormalTok{,}\DecValTok{1897}\NormalTok{,}\DecValTok{1900}\NormalTok{,}\DecValTok{1905}\NormalTok{,}\DecValTok{1910}\NormalTok{,}\DecValTok{1915}\NormalTok{,}\DecValTok{1921}\NormalTok{,}\DecValTok{1925}\NormalTok{,}\DecValTok{1930}\NormalTok{,}\DecValTok{1935}\NormalTok{,}\DecValTok{1940}\NormalTok{,}\DecValTok{1945}\NormalTok{,}\DecValTok{1955}\NormalTok{,}\DecValTok{1965}\NormalTok{,}\DecValTok{1975}\NormalTok{,}\DecValTok{1985}\NormalTok{,}\DecValTok{1995}\NormalTok{,}\DecValTok{2005}\NormalTok{,}\DecValTok{2006}\NormalTok{,}\DecValTok{2007}\NormalTok{,}\DecValTok{2008}\NormalTok{,}\DecValTok{2009}\NormalTok{,}\DecValTok{2010}\NormalTok{,}\DecValTok{2011}\NormalTok{,}\DecValTok{2012}\NormalTok{,}\DecValTok{2013}\NormalTok{,}\DecValTok{2014}\NormalTok{,}\DecValTok{2015}\NormalTok{,}\DecValTok{2016}\NormalTok{,}\DecValTok{2017}\NormalTok{,}\DecValTok{2018}\NormalTok{,}\DecValTok{2019}\NormalTok{,}\DecValTok{2020}\NormalTok{,}\DecValTok{2021}\NormalTok{),        }\CommentTok{\# Vector de años (ej. 1950:2020)}
+  \AttributeTok{type =} \StringTok{"mortality"}\NormalTok{,  }\CommentTok{\# Tipo de dato}
+  \AttributeTok{label =} \StringTok{"Mis datos"}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{"Mujeres"}
+\NormalTok{)}
+\NormalTok{my\_data\_mujeres2 }\OtherTok{\textless{}{-}} \FunctionTok{demogdata}\NormalTok{(}
+  \AttributeTok{data =}\NormalTok{ mxm\_matrix,           }\CommentTok{\# Matriz de tasas (o defunciones)}
+  \AttributeTok{pop =}\NormalTok{ lxm\_matrix,}
+  \AttributeTok{ages =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{40}\NormalTok{, }\DecValTok{45}\NormalTok{, }\DecValTok{50}\NormalTok{, }\DecValTok{55}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{65}\NormalTok{, }\DecValTok{70}\NormalTok{, }\DecValTok{75}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{85}\NormalTok{),       }\CommentTok{\# Vector de edades (ej. 0:100)}
+  \AttributeTok{years =} \FunctionTok{c}\NormalTok{(}\DecValTok{1895}\NormalTok{,}\DecValTok{1897}\NormalTok{,}\DecValTok{1900}\NormalTok{,}\DecValTok{1905}\NormalTok{,}\DecValTok{1910}\NormalTok{,}\DecValTok{1915}\NormalTok{,}\DecValTok{1921}\NormalTok{,}\DecValTok{1925}\NormalTok{,}\DecValTok{1930}\NormalTok{,}\DecValTok{1935}\NormalTok{,}\DecValTok{1940}\NormalTok{,}\DecValTok{1945}\NormalTok{,}\DecValTok{1955}\NormalTok{,}\DecValTok{1965}\NormalTok{,}\DecValTok{1975}\NormalTok{,}\DecValTok{1985}\NormalTok{,}\DecValTok{1995}\NormalTok{,}\DecValTok{2005}\NormalTok{,}\DecValTok{2006}\NormalTok{,}\DecValTok{2007}\NormalTok{,}\DecValTok{2008}\NormalTok{,}\DecValTok{2009}\NormalTok{,}\DecValTok{2010}\NormalTok{,}\DecValTok{2011}\NormalTok{,}\DecValTok{2012}\NormalTok{,}\DecValTok{2013}\NormalTok{,}\DecValTok{2014}\NormalTok{,}\DecValTok{2015}\NormalTok{,}\DecValTok{2016}\NormalTok{,}\DecValTok{2017}\NormalTok{,}\DecValTok{2018}\NormalTok{,}\DecValTok{2019}\NormalTok{,}\DecValTok{2020}\NormalTok{,}\DecValTok{2021}\NormalTok{),        }\CommentTok{\# Vector de años (ej. 1950:2020)}
+  \AttributeTok{type =} \StringTok{"mortality"}\NormalTok{,  }\CommentTok{\# Tipo de dato}
+  \AttributeTok{label =} \StringTok{"Mis datos"}\NormalTok{,}
+  \AttributeTok{name =} \StringTok{"Mujeres"}
+\NormalTok{)}
+
+\CommentTok{\# Realizamos el ajuste}
+\NormalTok{fit\_lc\_mujeres }\OtherTok{\textless{}{-}} \FunctionTok{lca}\NormalTok{(my\_data\_mujeres, }\AttributeTok{series =} \StringTok{"Mujeres"}\NormalTok{, }\AttributeTok{adjust =} \StringTok{"e0"}\NormalTok{)}
+\FunctionTok{summary}\NormalTok{(fit\_lc\_mujeres)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Lee-Carter analysis
+## 
+## Call: lca(data = my_data_mujeres, series = "Mujeres", adjust = "e0") 
+## 
+## Adjustment method: e0
+## Region: Mis datos
+## Years in fit: 1895 - 2021
+## Ages in fit: 0 - 85 
+## 
+## Percentage variation explained: 98.5%
+## 
+## ERROR MEASURES BASED ON MORTALITY RATES
+## 
+## Averages across ages:
+##       ME      MSE      MPE     MAPE 
+## -0.00054  0.00010  0.03130  0.11586 
+## 
+## Averages across years:
+##       IE      ISE      IPE     IAPE 
+## -0.03506  0.00633  2.37309  9.37368 
+## 
+## 
+## ERROR MEASURES BASED ON LOG MORTALITY RATES
+## 
+## Averages across ages:
+##      ME     MSE     MPE    MAPE 
+## 0.01360 0.03026 0.00061 0.02705 
+## 
+## Averages across years:
+##      IE     ISE     IPE    IAPE 
+## 1.11345 2.30286 0.01271 2.12253
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(fit\_lc\_mujeres)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-20-1.pdf}
+
+\clearpage
+
+\hypertarget{comparaciuxf3n-de-componentes-del-modelo-lee-carter-hombres-vs-mujeres}{%
+\subsection{Comparación de componentes del modelo Lee-Carter Hombres vs
+Mujeres}\label{comparaciuxf3n-de-componentes-del-modelo-lee-carter-hombres-vs-mujeres}}
+
+\hypertarget{hombres}{%
+\subsubsection{Hombres}\label{hombres}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(fit\_lc)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-21-1.pdf}
+
+\hypertarget{interpretaciones}{%
+\subsubsection{Interpretaciones}\label{interpretaciones}}
+
+\begin{itemize}
+\item
+  \(\alpha_x\): Efectos principales. La tasa de mortalidad aumenta
+  significativamente con la edad. La mortalidad por edad es más
+  pronunciada conforme los hombres envejecen. Podemos observar un
+  aumento más pronunciado en la mortalidad para los hombres de edad
+  avanzada, en comparación con las mujeres, lo cual nos indica que las
+  tasas de mortalidad en los hombres son más altas en edades más
+  avanzadas.
+\item
+  \(\beta_x\): Interacción. La curva para los hombres indica que la
+  mortalidad en los jóvenes ha disminuido, mientras que para las edades
+  más avanzadas, hay un descenso en las tasas de mortalidad, lo que nos
+  indica que son menos pronunciadas en los últimos años.
+\item
+  \(\kappa_x\): Tendencia temporal ajustada. Nos muestra una caída
+  importante en las tasas de mortalidad desde a principios del siglo XX,
+  esto nos indica una mejora en el sistema de salud pública y los
+  avances médicos que ha tenido México.
+\end{itemize}
+
+\clearpage
+
+\hypertarget{mujeres}{%
+\subsubsection{Mujeres}\label{mujeres}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(fit\_lc\_mujeres)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Proyecto-Curvas-de-Mortalidad-LC_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+\hypertarget{interpretaciones-1}{%
+\subsubsection{Interpretaciones:}\label{interpretaciones-1}}
+
+\begin{itemize}
+\item
+  \(\alpha_x\): Efectos principales. La tasa de mortalidad aumenta
+  significativamente con la edad, pero de manera menos pronunciada en
+  comparación con la de los hombres. Las mujeres tienden a tener una
+  tasa de mortalidad más baja.
+\item
+  \(\beta_x\): Interacción. La curva de mortalidad para las mujeres en
+  uno de los periodos se suaviza, lo que nos indica que existe una
+  tendencia más estable a través del tiempo.
+\item
+  \(\kappa_x\): Tendencia temporal ajustada. La tasa de motalidad en el
+  caso de las mujeres presenta una caída más moderada, esto nos sugiere
+  que puede estar relacionada con factores sociales, acceso a la salud o
+  incluso diferencias de género, entre otros factores.
+\end{itemize}
+
+\clearpage
+
+\hypertarget{conclusiones}{%
+\subsection{Conclusiones}\label{conclusiones}}
+
+La diferencia en la esperanza de vida implica que las mujeres
+necesitarán más recursos a lo largo de su vida, ya que presentan mayor
+longevidad. Los sistemas de pensiones en México deberían de adaptarse a
+este hecho.
+
+Sabemos que México enfrenta un envejecimiento poblacional, lo que
+conlleva a una mayor demanda de servicios de salud y pensiones. Es
+gracias a este modelo que podemos crear medidas para el cuidado de
+bienestar social.
+
+\clearpage
+
+\hypertarget{propuesta-de-modelo}{%
+\section{6. Propuesta de Modelo}\label{propuesta-de-modelo}}
+
+\hypertarget{descripciuxf3n-del-modelo-propuesto}{%
+\subsection{Descripción del modelo
+propuesto}\label{descripciuxf3n-del-modelo-propuesto}}
+
+El modelo Lee-Carter es una metodología estadística que fue desarrollada
+en 1992 por el demógrafo Raymond Lee y el economista Robert Carter, fue
+diseñada con el propósito de modelar y predecir las tasas de mortalidad
+de una población a lo largo del tiempo.
+
+Este modelo se ha convertido en una herramienta esencial en la
+demografía, especialmente en el análisis y proyección de la mortalidad
+de una población a lo largo de los años.El objetivo principal es
+capturar y proyectar las tasas de mortalidad de una población para
+distintos grupos de años. Esto lo hace apoyándose de datos históricos de
+mortalidad y de población.
+
+Es útil para entender tendencias de mortalidad a largo plazo, esto lo
+hace útil en áreas como pensiones, salúd pública y estudios de
+longevidad.
+
+\hypertarget{fuxf3rmula-del-modelo-lee-carter}{%
+\subsubsection{Fórmula del Modelo
+Lee-Carter}\label{fuxf3rmula-del-modelo-lee-carter}}
+
+\[
+\log(m_{x,t}) = \alpha_x + \beta_x \kappa_t + \epsilon_{x,t}
+\]
+
+Donde los parámetros son los siguientes:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha_x\): \textbf{Tendencia temporal} para el grupo de edad \(x\).
+  Este parámetro captura la evolución general de la mortalidad dentro de
+  la población a lo largo del tiempo.
+\item
+  \(\beta_x\): \textbf{Tasa de mortalidad base} para el grupo de edad
+  \(x\) en el período base. Representa la mortalidad para cada grupo de
+  edad suponiendo que no hubiera cambios en el tiempo.
+\item
+  \(\kappa_t\): \textbf{Componente de interacción entre edad y tiempo},
+  describe cómo las tasas de mortalidad de cada grupo de edad cambian a
+  través del tiempo.
+\item
+  \(\epsilon_{x,t}\): \textbf{Término de error} asociado a cada
+  observación de las tasas de mortalidad, que captura las variaciones no
+  explicadas por los otros parámetros que hay en el modelo.
+\end{itemize}
+
+\hypertarget{ventajas-del-modelo}{%
+\subsection{Ventajas del modelo}\label{ventajas-del-modelo}}
+
+\textbf{1.Simplicidad y eficacia:} además de que es un modelo simple, el
+modelo Lee-Carter es eficaz para describir y proyectar las tasas de
+mortalidad.
+
+\textbf{2. Flexibilidad:} puede adaptarse a distintas poblaciones y
+datos de mortalidad, también se puede adaptar a distintas edades y
+períodos en el tiempo.
+
+\textbf{3. Proyecciones a largo plazo:} permite realizar proyecciones de
+mortalidad a largo plazo, lo que lo hace útil para planificar
+estrategias de salúd pública.
+
+\hypertarget{limitaciones-del-modelo}{%
+\subsection{Limitaciones del modelo}\label{limitaciones-del-modelo}}
+
+\textbf{1. Linealidad del modelo:} el modelo asume que la mortalidad
+sigue una tendencia logarítmica a través del tiempo. Esto puede no ser
+completamente realista, ya que pueden haber eventos que alteren las
+tasas de mortalidad.
+
+\textbf{2. No captura las complejidades:} como es un modelo simple, no
+logra capturar las complejidades más detalladas de las tasas de
+mortalidad, tales como los impactos de eventos demográficos
+significativos o factores sociales.
+
+\hypertarget{justificaciuxf3n-de-la-elecciuxf3n-del-modelo}{%
+\subsection{Justificación de la elección del
+modelo}\label{justificaciuxf3n-de-la-elecciuxf3n-del-modelo}}
+
+Elegimos el modelo Lee-Carter debido a que es ideal para proyectar las
+tasas de mortalidad a largo plazo. Su capacidad para descomponer las
+tasas de mortalidad en tres componentes clave la tasa base por edad, la
+tendencia temporal y la interacción entre edad y tiempo, lo que lo
+convierte en una herramienta poderosa para la proyección precisa de la
+mortalidad en cualquier población. Además, su flexibilidad permite
+modelar diferentes escenarios y adaptarlo a diversas condiciones
+demográficas, lo que lo hace adecuado para México.
+
+Decidimos aplicar este modelo a México debido a que proporciona una
+herramienta útil para anticipar las tendencias futuras de mortalidad en
+el país. Las proyecciones obtenidas permitirán planificar con mayor
+precisión los recursos necesarios en áreas críticas como salud,
+pensiones y bienestar social. En particular, el modelo tiene
+aplicaciones clave dentro del sistema de pensiones y la seguridad
+social, ya que facilita la proyección del número de personas que
+alcanzarán la edad de jubilación y la estimación de las tasas de
+mortalidad de ese grupo.
+
+Además, creemos que con este trabajo estamos contribuyendo
+significativamente al área demográfica en México, ya que, al investigar
+el modelo Lee-Carter aplicado a datos históricos del país, hemos notado
+que existen pocos estudios que aborden este tema desde esta perspectiva.
+Con este análisis, esperamos aportar un valor adicional a la comprensión
+de la mortalidad en México y ofrecer una herramienta útil para futuras
+investigaciones y también en políticas públicas.
+
+\hypertarget{supuestos-del-modelo-lee-carter}{%
+\subsection{Supuestos del modelo
+Lee-Carter}\label{supuestos-del-modelo-lee-carter}}
+
+\textbf{1. Linealidad temporal:} las tasas de mortalidad siguen una
+tendencia logarítmica a través del tiepo.
+
+\textbf{2. Independencia de las tasas de mortalidad:} las tasas de
+mortalidad por edad son independientes entre sí.
+
+\textbf{3. Interacción entre edad y tiempo:} existe un término de
+interacción que modela cómo las tasas de mortalidad de cada grupo de
+edad van cambiando con el tiempo.
+
+\textbf{4. Homogeneidad dentro de los grupos de edad:} se asume que
+todos los individuos dentro de un grupo de edad tienen la misma tasa de
+mortalidad.
+
+\textbf{5. Ausencia de choques externos:} no se consideran eventos fuera
+de lo normal (como pandemias o guerras) que alteren considerablemente
+las tasas de mortalidad.
+
+\textbf{6. Normalidad del error:} el término de error
+(\(\epsilon_{x,t}\)) que captura las desviaciones en las tasas de
+mortalidad sigue una distribución normal.
+
+\textbf{7. Estabilidad de las proyecciones:} suponemos que las
+tendencias históricas de mortalidad continúan de forma estable en el
+futuro.
+
+\clearpage
+
+\hypertarget{proceso-de-estimaciuxf3n}{%
+\subsection{Proceso de estimación}\label{proceso-de-estimaciuxf3n}}
+
+La estimación del modelo se realiza a través de un análisis de
+componentes principales (PCA) o también de descomposición en valores
+singulares (SVD).
+
+Lo primero que se hace es realizar el logaritmo de las tasas de
+mortalidad (mx), ya que el modelo proyecta de esta manera la mortalidad.
+Después se realiza la descomposición de los componentes para estimar
+(alfa) , (beta) y (kappa).
+
+La optimización de estos parámetros obtenidos se realiza a través de un
+proceso de optimización, de manera que se minimizan la diferencia entre
+las tasas de mortalidad observadas y las predicciones generadas por el
+modelo.
+
+\hypertarget{paruxe1metros-del-modelo-lee-carter}{%
+\subsection{Parámetros del modelo
+Lee-Carter}\label{paruxe1metros-del-modelo-lee-carter}}
+
+\hypertarget{paruxe1metro-alfa}{%
+\subsubsection{Parámetro alfa}\label{paruxe1metro-alfa}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha_x\): \textbf{Tendencia temporal} para el grupo de edad \(x\).
+  Este parámetro captura la evolución general de la mortalidad dentro de
+  la población a lo largo del tiempo.
+\end{itemize}
+
+\hypertarget{estimaciuxf3n}{%
+\subsubsection{Estimación}\label{estimaciuxf3n}}
+
+\[
+\alpha_t = \frac{1}{X} \sum_{x=1}^{X} \left(\log(m_{x,t}) - \beta_x \right)
+\]
+
+Muestra cómo las tasas de mortalidad para cada evolucionan de manera
+distitna en cada año. Captura la interacción específica entre la edad x
+y el año t.
+
+Se puede calcular a partir de la descomposición de las tasas de
+mortalidad observadas, utilizando un proceso de optimización para
+reducir los errores en la predicción.
+
+\hypertarget{paruxe1metro-beta}{%
+\subsubsection{Parámetro beta}\label{paruxe1metro-beta}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\beta_x\): \textbf{Tasa de mortalidad base} para el grupo de edad
+  \(x\) en el período base. Representa la mortalidad para cada grupo de
+  edad suponiendo que no hubiera cambios en el tiempo.
+\end{itemize}
+
+\hypertarget{estimaciuxf3n-1}{%
+\subsubsection{Estimación}\label{estimaciuxf3n-1}}
+
+\[
+\beta_x = \frac{1}{T} \sum_{t=1}^{T} \log(m_{x,t})
+\]
+
+Representa la tasa base de mortalidad para cada grupo de edad en el
+periodo base, que por lo general es el periodo inicial. Muestra cómo es
+la mortalidad para cada edad dentro de un periodo en específico. Se
+calcula a partir de la media de las tasas de mortalidad para cada grupo
+de edad en todos los años que se tengan en los datos.
+
+\clearpage
+
+\hypertarget{paruxe1metro-kappa}{%
+\subsubsection{Parámetro kappa}\label{paruxe1metro-kappa}}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\kappa_t\): \textbf{Componente de interacción entre edad y tiempo},
+  describe cómo las tasas de mortalidad de cada grupo de edad cambian a
+  través del tiempo.
+\end{itemize}
+
+\hypertarget{estimaciuxf3n-2}{%
+\subsubsection{Estimación}\label{estimaciuxf3n-2}}
+
+Este parámetro captura la manera en que las tasas de mortalidad para un
+grupo de edad específico cambian con el tiempo, es decir, cómo es que
+evoluciona la mortalidad para cada grupo en función de los años.
+
+\[
+\kappa_{x,t} = \log(m_{x,t}) - \beta_x - \alpha_t
+\]
+
+El conjunto de estas componentes hace el modelo Lee-Carter
+
+\[
+\log(m_{x,t}) = \alpha_x + \beta_x \kappa_t + \epsilon_{x,t}
+\]
+
+De esta manera hemos visto la estimación de los parámetros que conforman
+este modelo.
+
+\hypertarget{plan-de-simulaciones-para-el-segundo-parcial}{%
+\subsection{Plan de simulaciones para el segundo
+parcial}\label{plan-de-simulaciones-para-el-segundo-parcial}}
+
+El objetivo de las simulaciones será evaluar la capacidad predictiva del
+modelo Lee-Carter y compararlo con un modelo de mortalidad dinámico que
+refleje mejor la realidad de la mortalidad y que no tenga las
+limitaciones que tenga el modelo Lee-Carter.
+
+Para el segundo parcial, además de realizar las simulaciones
+correspondientes, se pretende comparar el modelo Lee-Carter con modelos
+dinámicos que reflejen mejor la realidad. Modelos de Cohorte Dinámica o
+modelos de aprendizaje automático. También se pretende comparar las
+proyecciones realizadas con las proyecciones que realizan las
+instituciones como el INEGI o la CONAPO.
+
+\end{document}
